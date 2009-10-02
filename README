@@ -1,0 +1,38 @@
+= FreightQuote
+
+A simple and straight forward interface to the FreightQuote.com API.
+
+== Helpful links
+
+* <b>Documentation:</b> http://rdoc.info/projects/tgfi/freightquote
+* <b>Repository:</b> http://github.com/tgfi/freightquote/tree/master
+* <b>Issues:</b> http://github.com/tgfi/freightquote/issues
+
+<b>Before contacting me directly, please read:</b>
+
+If you find a bug or a problem please post it in the issues section. This also benefits other people in the future with the same questions / problems. Thank you.
+
+== Install & use
+
+Install the gem from rubyforge:
+
+  sudo gem install freightquote
+
+Or from github:
+
+  sudo gem install tgfi-freightquote
+
+Now just include it in your project and you are ready to go.
+
+You can also install this as a plugin:
+
+  script/plugin install git://github.com/tgfi/freightquote.git
+
+See below for usage examples.
+
+== Examples
+
+
+== Copyright
+
+Copyright (c) 2009 {Greg Benedict of TGFI}[http://www.tgfi.com], released under the MIT license  
