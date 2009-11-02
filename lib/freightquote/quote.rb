@@ -65,7 +65,7 @@ module FreightQuote #:nodoc:
         end
       end
       
-      low_index == nil if low_rate = 0.00
+      low_index == nil if low_rate == 0.00
       @carriers[low_index] unless low_index.nil?
       
     end
@@ -89,7 +89,7 @@ module FreightQuote #:nodoc:
         end
         
         xml.tag!('service') do
-          service_cod.is_a?(FreightQuote::Cod) ? service_cod.to_xml(xml) : Cod.new().to_xml(xml)
+          !service_cod.nil? and service_cod.is_a?(FreightQuote::Cod) ? service_cod.to_xml(xml) : Cod.new().to_xml(xml)
           xml.tag!('blind', service_blind)
           xml.tag!('packaged', service_packaged)
         end
@@ -219,7 +219,7 @@ module FreightQuote #:nodoc:
         errors.add :shipments, "should be an array of FreightQuote::Shipment objects." 
       end
       
-      errors.add :service_cod, "should be a FreightQuote::Cod object" unless service_cod.is_a?(FreightQuote::Cod)
+      errors.add :service_cod, "should be a FreightQuote::Cod object" unless service_cod.nil? or service_cod.is_a?(FreightQuote::Cod)
             
     end
     
